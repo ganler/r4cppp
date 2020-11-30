@@ -56,6 +56,17 @@ continue to work as expected.
 So, you probably want the stable channel. If you're on Linux or OS X, the
 easiest way to get it is to run
 
+> More steps for users in China!
+>
+> Before downloading, you type:
+>
+> ```shell
+> export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+> export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+> ```
+>
+> This made download much faster.
+
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -73,6 +84,15 @@ To build the compiler, run `./configure && make rustc`. See
 [building-from-source](https://github.com/rust-lang/rust#building-from-source)
 for more detailed instructions.
 
+> After that, use crates mirror:
+>
+> ```shell
+> echo "[source.crates-io] 
+> registry = \"https://github.com/rust-lang/crates.io-index\"
+> replace-with = 'ustc'
+> [source.ustc]
+> registry = \"git://mirrors.ustc.edu.cn/crates.io-index\"" > ~/.cargo/config
+> ```
 
 ## Hello World!
 
