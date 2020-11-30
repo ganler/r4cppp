@@ -128,7 +128,7 @@ leave program args for later). There are no separate declarations or header
 files as with C++. `println!` is Rust's equivalent of printf. The `!` means that
 it is a macro. A subset of the standard library is available without needing to
 be explicitly imported/included (the prelude). The `println!` macro is included
-as part of that subset.
+as part of that subset
 
 Lets change our example a little bit:
 
